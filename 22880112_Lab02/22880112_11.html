@@ -4,25 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .text-information {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+
+    .text-information div {
+      margin-top: 12px;
+    }
+
+    .gender-information {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
   <h1>Đăng ký</h1>
   <h3>Luôn miễn phí.</h3>
   <form action="01_Result.html" method="get">
-    <div>
+    <div class="text-information">
       <div>
         <input type="text" name="fname" placeholder="Họ">
         <input type="text" name="lname" placeholder="Tên">
       </div>
-      <input type="text" name="phone_email" placeholder="Số di động hoặc email">
-      <input type="password" name="password" placeholder="Mật khẩu mới">
+      <div>
+        <input type="text" name="phone_email" placeholder="Số di động hoặc email">
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Mật khẩu mới">
+      </div>
     </div>
 
-    <div>
+    <div class="day-information">
       <label>Ngày sinh</label>
       <div>
         <select name="bday" id="">
-          <option value="1">1</option>
+          <option value="1" selected>1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
@@ -55,21 +77,21 @@
           <option value="31">31</option>
         </select>
         <select name="bmonth">
-          <option value="thang1">Thang 1</option>
-          <option value="thang2">Thang 2</option>
-          <option value="thang3">Thang 3</option>
-          <option value="thang4">Thang 4</option>
-          <option value="thang5">Thang 5</option>
-          <option value="thang6">Thang 6</option>
-          <option value="thang7">Thang 7</option>
-          <option value="thang8">Thang 8</option>
-          <option value="thang9">Thang 9</option>
-          <option value="thang10">Thang 10</option>
-          <option value="thang11">Thang 11</option>
-          <option value="thang12">Thang 12</option>
+          <option value="thang1" selected>Tháng 1</option>
+          <option value="thang2">Tháng 2</option>
+          <option value="thang3">Tháng 3</option>
+          <option value="thang4">Tháng 4</option>
+          <option value="thang5">Tháng 5</option>
+          <option value="thang6">Tháng 6</option>
+          <option value="thang7">Tháng 7</option>
+          <option value="thang8">Tháng 8</option>
+          <option value="thang9">Tháng 9</option>
+          <option value="thang10">Tháng 10</option>
+          <option value="thang11">Tháng 11</option>
+          <option value="thang12">Tháng 12</option>
         </select>
         <select name="byear">
-          <option value="1990">1990</option>
+          <option value="1990" selected>1990</option>
           <option value="1991">1991</option>
           <option value="1992">1992</option>
           <option value="1993">1993</option>
@@ -98,12 +120,15 @@
           <option value="2016">2016</option>          
         </select>
       </div>
-      <input type="date">
     </div>
 
-    <div>
-      <input type="radio" name="gender"> Nữ <br>
-      <input type="radio" name="gender"> Nam <br>
+    <div class="gender-information">
+      <div>
+        <input type="radio" name="gender" value="nu" required> Nữ <br>
+      </div>
+      <div>
+        <input type="radio" name="gender" value="nam" required> Nam <br>
+      </div>
     </div>
 
     <input type="submit" value="Tạo tài khoản">

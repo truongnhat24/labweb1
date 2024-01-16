@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    form > div {
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create your Google Account</h1>
+  <form action="01_Result.html" method="get">
+    <div>
+      <label for="fname">Name</label>
+      <input type="text" name="fname" id="fname" placeholder="First" required>
+      <input type="text" name="lname" placeholder="Last" required>
+    </div>
+
+    <div>
+      <label for="email">Choose your username</label>
+      <input type="email" name="email" placeholder="@gmail.com" id="email" required>
+    </div>
+
+    <div>
+      <label for="password">Create a password</label>
+      <input type="password" id="password" required>
+    </div>
+
+    <div>
+      <label for="cpassword">Confirm your password</label>
+      <input type="password" id="cpassword" required>
+    </div>
+
+    <div>
+      <label for="birthday">Birthday</label>
+      <select name="bmonth" id="birthday">
+        <option value="">Month</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <input type="text" placeholder="Day" name="bday">
+      <input type="text" placeholder="Year" name="byear">
+    </div>
+    
+    <div>
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender">
+        <option value="">I am...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="phone">Mobile phone</label>
+      <input type="text" name="phone" placeholder="+84">
+    </div>
+
+    <div>
+      <label for="current_email">Your current email address</label>
+      <input type="email" name="current_email" id="current_email">
+    </div>
+
+    <div>
+      <label for="location">Location</label>
+      <select name="location" id="location">
+        <option value="vietnam">Vietnam (Việt Nam)</option>
+        <option value="china">China (Trung Quốc)</option>
+        <option value="russia">Russia (Nga)</option>
+      </select>
+    </div>
+
+    <input type="submit" value="Next step">
+  </form>
+</body>
+</html>
