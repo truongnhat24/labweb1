@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        form{
+            width: 600px;
+        }
+        form input, form textarea {
+            margin-bottom: 8px;
+            width: 100%;
+            border-color: rgb(127, 234, 255);
+            border-style: solid;
+        }
+        form input:focus-visible, form textarea:focus-visible {
+            outline-color: rgb(60, 210, 237);
+        }
+    </style>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="#" method="get">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username" required><br>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" name="password" required><br>
+
+        <label for="confirmed_password">Confirmed Password</label>
+        <input id="confirmed_password" type="password" placeholder="Confirmed Password" name="confirmed_password" required><br>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please match the requested format!')"><br>
+
+        <button type="submit">Register</button>
+    </form>
+    <script src="validation_Register.js"></script>
+</body>
+</html>

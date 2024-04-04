@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Address</title>
+    <style>
+        form{
+            width: 600px;
+        }
+        form input, form textarea {
+            margin-bottom: 8px;
+            width: 100%;
+            border-color: rgb(127, 234, 255);
+            border-style: solid;
+        }
+        form input:focus-visible, form textarea:focus-visible {
+            outline-color: rgb(60, 210, 237);
+        }
+    </style>
+</head>
+<body>
+    <h1>Delivery Address</h1>
+    <form action="#" method="get">
+        <label for="fullname">Full name</label>
+        <input type="text" placeholder="Full name" name="fullname" id="fullname" required><br>
+
+        <label for="address">Address</label>
+        <input id="address" type="text" placeholder="Address" name="address" required><br>
+
+        <label for="phone_number">Phone number</label>
+        <input id="phone_number" type="tel" placeholder="123-4567-8901" name="phone_number" minlength="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required  oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please match the requested format!')"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        form{
+            width: 600px;
+        }
+        form input, form textarea {
+            margin-bottom: 8px;
+            width: 100%;
+            border-color: rgb(127, 234, 255);
+            border-style: solid;
+        }
+        form input:focus-visible, form textarea:focus-visible {
+            outline-color: rgb(60, 210, 237);
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <input type="text" placeholder="Name" name="name" required oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter your name!')"><br>
+        <input type="email" placeholder="Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please match the requested format!')"><br>
+        <input type="text" placeholder="Subject" name="subject" required  oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter your subject!')"><br>
+        <textarea name="message" cols="30" rows="10" placeholder="Message" required  oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Please enter your message!')"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

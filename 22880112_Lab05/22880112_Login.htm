@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form{
+            width: 600px;
+        }
+        form input, form textarea {
+            margin-bottom: 8px;
+            width: 100%;
+            border-color: rgb(127, 234, 255);
+            border-style: solid;
+        }
+        form input:focus-visible, form textarea:focus-visible {
+            outline-color: rgb(60, 210, 237);
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="#" method="get">
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username" required><br>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
